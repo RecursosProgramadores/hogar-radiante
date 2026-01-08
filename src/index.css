@@ -109,9 +109,7 @@
     --input: 30 15% 20%;
     --ring: 340 100% 55%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
