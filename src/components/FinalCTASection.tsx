@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Check, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import beewaxProduct from "@/assets/beewax-product.jpg";
+import beewaxProduct from "@/assets/producto.png";
 
 const features = [
-  "Fórmula natural con cera de abejas pura",
-  "Acción 3 en 1: restaura, protege y da brillo",
-  "Seguro para toda la familia y mascotas",
-  "Aroma natural y agradable",
+  "Cera de abejas 100% natural",
+  "Restaura, protege y da brillo",
+  "Seguro para niños y mascotas",
+  "Aroma natural",
 ];
 
 const FinalCTASection = () => {
@@ -41,37 +41,37 @@ const FinalCTASection = () => {
                 </div>
               </div>
 
-              <div className="p-8 md:p-12 flex flex-col justify-center">
-                <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
+              <div className="p-6 md:p-12 flex flex-col justify-center">
+                <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider mb-2">
                   Producto estrella
                 </span>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+                <h2 className="text-2xl md:text-4xl font-serif font-bold text-foreground mb-2">
                   BeeWax
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Cera para madera con fórmula 100% natural
+                <p className="text-base md:text-lg text-muted-foreground mb-6">
+                  Cera natural para madera
                 </p>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2.5 mb-6">
                   {features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <div className="w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Check className="w-4 h-4 text-accent" />
+                    <li key={index} className="flex items-center gap-2.5">
+                      <div className="w-5 h-5 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3.5 h-3.5 text-accent" />
                       </div>
-                      <span className="text-foreground">{feature}</span>
+                      <span className="text-sm md:text-base text-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-primary">S/39.90</span>
-                  <span className="text-muted-foreground ml-2">+ envío</span>
+                  <span className="text-3xl md:text-4xl font-bold text-primary">S/39.90</span>
+                  <span className="text-sm text-muted-foreground ml-2">+ envío</span>
                 </div>
 
                 <div className="space-y-3">
                   <Button
                     size="lg"
-                    className="w-full text-lg py-6 shadow-elevated hover:shadow-glow transition-all"
+                    className="w-full text-base md:text-lg py-5 md:py-6 shadow-elevated hover:shadow-glow transition-all"
                     asChild
                   >
                     <a
@@ -80,17 +80,17 @@ const FinalCTASection = () => {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2"
                     >
-                      <MessageCircle className="w-5 h-5" />
-                      Pedir por WhatsApp ahora
+                      <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
+                      Pedir ahora
                     </a>
                   </Button>
 
                   <Button
                     variant="outline"
                     size="lg"
-                    className="w-full border-2 border-primary/30 hover:border-primary hover:bg-primary/5"
+                    className="w-full border-2 border-primary/30 hover:border-primary hover:bg-primary/5 text-sm md:text-base py-4 md:py-5"
                   >
-                    Agregar pañitos por solo S/15 extra
+                    + Pañitos por S/15
                   </Button>
                 </div>
               </div>
