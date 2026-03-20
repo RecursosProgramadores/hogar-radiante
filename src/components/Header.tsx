@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
+import logoRadiante from "../assets/logos/logoradiante.png";
+import whatsappIcon from "../assets/logos/whatsapp.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,8 +15,8 @@ const Header = () => {
     { label: "Testimonios", href: "#testimonios" },
   ];
 
-  const whatsappNumber = "51999999999"; // Cambia este número
-  const whatsappMessage = "Hola! Me gustaría obtener más información sobre sus productos.";
+  const whatsappNumber = "51987902933";
+  const whatsappMessage = "¡Hola! Estoy visitando la página de Hogar & Detalles y me gustaría recibir más información sobre sus productos, por favor.";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,18 +67,11 @@ const Header = () => {
             <div className={`flex items-center gap-3 transition-all duration-300 ${
               isScrolled ? 'scale-90' : 'scale-100'
             }`}>
-              {/* Placeholder Logo - Reemplazar con imagen */}
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/60 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">H&D</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-serif font-bold text-foreground group-hover:text-primary transition-colors">
-                  Hogar & Detalles
-                </span>
-                <span className="text-[10px] text-muted-foreground tracking-wider uppercase">
-                  Productos pensados para ti
-                </span>
-              </div>
+              <img 
+                src={logoRadiante} 
+                alt="Hogar & Detalles Logo" 
+                className="h-12 w-auto object-contain"
+              />
             </div>
           </a>
 
@@ -100,7 +95,7 @@ const Header = () => {
             onClick={handleWhatsAppClick}
             className="bg-green-600 hover:bg-green-700 text-white gap-2"
           >
-            <MessageCircle className="w-4 h-4" />
+            <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 object-contain brightness-0 invert" />
             Contactar
           </Button>
         </div>
@@ -121,12 +116,11 @@ const Header = () => {
             onClick={(e) => handleNavClick(e, '#inicio')}
             className="flex items-center gap-2"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/60 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">H&D</span>
-            </div>
-            <span className="text-base font-serif font-bold text-foreground">
-              Hogar & Detalles
-            </span>
+            <img 
+              src={logoRadiante} 
+              alt="Hogar & Detalles Logo" 
+              className="h-10 w-auto object-contain"
+            />
           </a>
 
           <Button 
@@ -134,7 +128,7 @@ const Header = () => {
             size="sm"
             className="bg-green-600 hover:bg-green-700 text-white p-2"
           >
-            <MessageCircle className="w-5 h-5" />
+            <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 object-contain brightness-0 invert" />
           </Button>
         </div>
       </div>
@@ -166,7 +160,7 @@ const Header = () => {
                 }}
                 className="bg-green-600 hover:bg-green-700 text-white gap-2 mt-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 object-contain brightness-0 invert" />
                 Contactar por WhatsApp
               </Button>
             </div>

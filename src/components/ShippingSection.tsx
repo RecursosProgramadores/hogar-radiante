@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Truck, Lock, MessageCircle, Heart, MapPin, Package } from "lucide-react";
+import { Truck, Lock, ShieldCheck, MapPin, Package, Gift } from "lucide-react";
+import whatsappIcon from "../assets/logos/whatsapp.svg";
 
 const shippingInfo = [
   {
@@ -19,7 +20,7 @@ const shippingInfo = [
     text: "Envío gratis por Shalom hasta S/14",
   },
   {
-    icon: Heart,
+    icon: Gift,
     text: "Promoción: Recoge en 7 días o paga envío extra",
   },
 ];
@@ -27,8 +28,13 @@ const shippingInfo = [
 const trustIcons = [
   { icon: Truck, label: "Envío seguro" },
   { icon: Lock, label: "Pago protegido" },
-  { icon: MessageCircle, label: "Soporte WhatsApp" },
-  { icon: Heart, label: "Familia segura" },
+  { 
+    icon: ({ className }: { className?: string }) => (
+      <img src={whatsappIcon} alt="WhatsApp" className={`${className} object-contain`} />
+    ), 
+    label: "Soporte WhatsApp" 
+  },
+  { icon: ShieldCheck, label: "Garantía total" },
 ];
 
 const ShippingSection = () => {
@@ -42,9 +48,8 @@ const ShippingSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-            Comprar con nosotros es fácil y seguro{" "}
-            <span className="text-primary">❤️</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight text-foreground mb-4">
+            Comprar con nosotros es fácil y seguro
           </h2>
         </motion.div>
 
@@ -54,7 +59,7 @@ const ShippingSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-card rounded-3xl p-8 shadow-card mb-8"
+            className="bg-card/90 backdrop-blur-md border border-border/40 rounded-3xl p-8 md:p-10 shadow-elevated mb-12 hover:shadow-glow transition-shadow duration-500"
           >
             <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
               Información de envío
@@ -82,9 +87,9 @@ const ShippingSection = () => {
             {trustIcons.map((item, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl p-4 shadow-soft flex flex-col items-center gap-2 text-center"
+                className="bg-card/90 backdrop-blur-md border border-border/30 rounded-2xl p-6 shadow-soft hover:-translate-y-1 hover:shadow-card transition-all duration-300 flex flex-col items-center gap-3 text-center group"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <span className="text-sm font-medium text-foreground">

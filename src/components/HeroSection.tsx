@@ -18,9 +18,8 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight mb-6">
-                Revive el brillo natural de tu hogar con productos pensados para ti{" "}
-                <span className="text-primary">❤️</span>
+              <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-serif font-extrabold tracking-tight text-foreground leading-[1.1] mb-6">
+                Revive el brillo natural de tu hogar con productos pensados para ti
               </h1>
             </motion.div>
 
@@ -30,8 +29,8 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-muted-foreground mb-8"
             >
-              <span className="font-semibold text-foreground">BeeWax:</span> cera natural que hidrata, 
-              protege y da brillo instantáneo a tus muebles. Seguro para niños y mascotas.
+              <span className="font-semibold text-foreground">BeeWax:</span> Cera natural que hidrata, 
+              protege y da un brillo instantáneo a tus muebles. Fórmula exclusiva y segura.
             </motion.p>
 
             <motion.div
@@ -55,13 +54,13 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 sm:gap-6"
             >
-              <div className="flex items-center gap-2 text-sm bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-soft">
-                <Truck className="w-5 h-5 text-primary" />
-                <span className="text-foreground">Envío gratis en compras calificadas</span>
+              <div className="flex items-center gap-3 text-sm bg-background/60 border border-border/50 backdrop-blur-md px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all">
+                <Truck className="w-4 h-4 text-primary" />
+                <span className="text-foreground font-medium">Envío gratis en compras calificadas</span>
               </div>
-              <div className="flex items-center gap-2 text-sm bg-card/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-soft">
-                <ShieldCheck className="w-5 h-5 text-primary" />
-                <span className="text-foreground">Contraentrega en Lima y Callao</span>
+              <div className="flex items-center gap-3 text-sm bg-background/60 border border-border/50 backdrop-blur-md px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all">
+                <ShieldCheck className="w-4 h-4 text-primary" />
+                <span className="text-foreground font-medium">Pago contraentrega en Lima y Callao</span>
               </div>
             </motion.div>
           </div>
@@ -103,7 +102,7 @@ const HeroSection = () => {
                 }}
               />
               <motion.div
-                className="absolute top-20 right-16 w-2 h-2 bg-pink-400 rounded-full"
+                className="absolute top-20 right-16 w-2 h-2 bg-amber-400 rounded-full"
                 animate={{
                   y: [-10, -25, -10],
                   opacity: [0, 1, 0],
@@ -197,7 +196,7 @@ const HeroSection = () => {
                   }}
                 />
                 <motion.div 
-                  className="absolute inset-0 rounded-full border-4 border-pink-500/30"
+                  className="absolute inset-0 rounded-full border-4 border-amber-500/30"
                   animate={{
                     scale: [1, 1.5, 1],
                     opacity: [0.5, 0, 0.5]

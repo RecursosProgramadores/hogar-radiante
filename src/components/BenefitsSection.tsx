@@ -50,7 +50,7 @@ const BenefitsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight text-foreground mb-4">
             Por qué amarás <span className="text-primary">BeeWax</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -68,9 +68,9 @@ const BenefitsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card p-6 rounded-2xl shadow-card hover:shadow-elevated transition-all group cursor-default"
+                className="bg-card/80 backdrop-blur-sm border border-border/40 p-6 md:p-8 rounded-3xl shadow-soft hover:shadow-elevated transition-all duration-300 group cursor-default hover:-translate-y-1"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                   <benefit.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -107,7 +107,7 @@ const BenefitsSection = () => {
 
                 {/* Floating Badge */}
                 <motion.div
-                  className="absolute top-4 right-4 bg-gradient-to-r from-primary to-pink-600 text-white px-4 py-2 rounded-full shadow-lg text-sm font-bold"
+                  className="absolute top-4 right-4 bg-gradient-to-r from-primary to-amber-500 text-primary-foreground px-4 py-2 rounded-full shadow-lg text-sm font-bold"
                   animate={{
                     y: [0, -10, 0],
                   }}
@@ -122,30 +122,29 @@ const BenefitsSection = () => {
               </div>
             </div>
 
-            {/* Stats Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 }}
-              className="bg-gradient-to-br from-primary to-pink-600 text-white rounded-2xl p-6 shadow-elevated"
+              className="bg-gradient-to-br from-primary to-amber-500 text-primary-foreground rounded-2xl p-6 shadow-elevated"
             >
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
                   <div className="text-3xl font-bold mb-1">2000+</div>
-                  <div className="text-sm text-white/80">Clientes Felices</div>
+                  <div className="text-sm text-primary-foreground/80">Clientes Felices</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold mb-1">100%</div>
-                  <div className="text-sm text-white/80">Natural</div>
+                  <div className="text-sm text-primary-foreground/80">Natural</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold mb-1">5★</div>
-                  <div className="text-sm text-white/80">Calificación</div>
+                  <div className="text-sm text-primary-foreground/80">Calificación</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold mb-1">48h</div>
-                  <div className="text-sm text-white/80">Entrega Lima</div>
+                  <div className="text-sm text-primary-foreground/80">Entrega Lima</div>
                 </div>
               </div>
             </motion.div>

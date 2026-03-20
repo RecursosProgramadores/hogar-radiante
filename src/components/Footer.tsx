@@ -1,9 +1,11 @@
-import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { Facebook, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "./ui/button";
+import logoRadiante from "../assets/logos/logoradiante.png";
+import whatsappIcon from "../assets/logos/whatsapp.svg";
 
 const Footer = () => {
-  const whatsappNumber = "51999999999";
-  const whatsappMessage = "Hola! Me gustaría obtener más información.";
+  const whatsappNumber = "51987902933";
+  const whatsappMessage = "¡Hola! Me gustaría obtener más información acerca de Hogar & Detalles.";
 
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -24,15 +26,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/60 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">H&D</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-serif font-bold">Hogar & Detalles</h3>
-                <p className="text-xs text-white/60 tracking-wider uppercase">
-                  Productos pensados para ti
-                </p>
-              </div>
+              <img 
+                src={logoRadiante} 
+                alt="Hogar & Detalles Logo" 
+                className="h-16 w-auto object-contain"
+              />
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
               Transformamos tu hogar con productos de calidad que cuidan y embellecen cada rincón de tu espacio.
@@ -41,7 +39,7 @@ const Footer = () => {
               onClick={handleWhatsAppClick}
               className="bg-green-600 hover:bg-green-700 text-white gap-2 w-full md:w-auto"
             >
-              <MessageCircle className="w-4 h-4" />
+              <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 object-contain brightness-0 invert" />
               Contactar por WhatsApp
             </Button>
           </div>
@@ -81,20 +79,23 @@ const Footer = () => {
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white/90 font-medium">Lima, Perú</p>
-                  <p className="text-white/60 text-xs mt-1">Envíos a todo el país</p>
+                  <p className="text-white/90 font-medium">Lima, Surco</p>
+                  <p className="text-white/60 text-xs mt-1 leading-relaxed">
+                    Av. Las Gaviotas 1991<br />
+                    Urb. Sagitario
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+51999999999" className="text-white/70 hover:text-primary transition-colors">
-                  +51 999 999 999
+                <a href="tel:+51987902933" className="text-white/70 hover:text-primary transition-colors">
+                  +51 987 902 933
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:contacto@hogarydetalles.com" className="text-white/70 hover:text-primary transition-colors">
-                  contacto@hogarydetalles.com
+                <a href="mailto:hogarydetalles18@gmail.com" className="text-white/70 hover:text-primary transition-colors truncate">
+                  hogarydetalles18@gmail.com
                 </a>
               </div>
             </div>
@@ -104,25 +105,13 @@ const Footer = () => {
               <p className="text-sm text-white/60 mb-3">Síguenos en:</p>
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=61569660991878"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/5 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-5 h-5 text-white/70 group-hover:text-white" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-white/5 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-5 h-5 text-white/70 group-hover:text-white" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-white/5 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 group"
-                  aria-label="YouTube"
-                >
-                  <Youtube className="w-5 h-5 text-white/70 group-hover:text-white" />
                 </a>
               </div>
             </div>

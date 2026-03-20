@@ -72,9 +72,12 @@ const UpsellSection = () => {
                 </span>
               </div>
 
-              <Button size="lg" className="w-full shadow-elevated">
-                Agregar pañitos por solo S/15 extra
-              </Button>
+              <div className="w-full bg-primary/10 border border-primary/20 rounded-xl p-4 flex items-center justify-center gap-2 shadow-sm">
+                <span className="text-lg">✨</span>
+                <p className="text-sm md:text-base text-foreground font-medium">
+                  Agrégalos a tu pedido de BeeWax por solo <strong className="text-primary-foreground font-bold">S/15 extra</strong>
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

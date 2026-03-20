@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Check, MessageCircle } from "lucide-react";
+import { Check } from "lucide-react";
+import whatsappIcon from "../assets/logos/whatsapp.svg";
 import { Button } from "@/components/ui/button";
 import beewaxProduct from "@/assets/producto.png";
 
@@ -11,8 +12,8 @@ const features = [
 ];
 
 const FinalCTASection = () => {
-  const whatsappNumber = "51999999999"; // Replace with actual number
-  const message = encodeURIComponent("¡Hola! Quiero pedir mi BeeWax 🐝");
+  const whatsappNumber = "51987902933";
+  const message = encodeURIComponent("¡Hola! Me encantó el BeeWax y me gustaría realizar un pedido. ¿Me ayudan con el proceso? 🐝");
 
   return (
     <section id="productos" className="py-20 bg-background">
@@ -71,7 +72,7 @@ const FinalCTASection = () => {
                 <div className="space-y-3">
                   <Button
                     size="lg"
-                    className="w-full text-base md:text-lg py-5 md:py-6 shadow-elevated hover:shadow-glow transition-all"
+                    className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white text-base md:text-lg py-5 md:py-6 shadow-elevated hover:shadow-glow transition-all"
                     asChild
                   >
                     <a
@@ -80,18 +81,17 @@ const FinalCTASection = () => {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2"
                     >
-                      <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
-                      Pedir ahora
+                      <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 md:w-6 md:h-6 object-contain brightness-0 invert" />
+                      Pedir ahora por WhatsApp
                     </a>
                   </Button>
 
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="w-full border-2 border-primary/30 hover:border-primary hover:bg-primary/5 text-sm md:text-base py-4 md:py-5"
-                  >
-                    + Pañitos por S/15
-                  </Button>
+                  <div className="w-full bg-primary/5 border border-primary/20 rounded-xl p-4 flex items-center justify-center gap-3 shadow-soft transition-colors hover:bg-primary/10">
+                    <span className="text-xl drop-shadow-sm">✨</span>
+                    <p className="text-sm md:text-base text-foreground/80 font-medium">
+                      Opción adicional: <strong className="text-foreground">Pañitos de aplicación</strong> por solo <strong className="text-foreground font-extrabold">S/15</strong>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
